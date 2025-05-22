@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Registration</h2>
+    
+    <!-- Flash messages (Optional, based on validation feedback) -->
+    <div id="flashMessage" class="flash-message" style="display: none;"></div>
+
+    <!-- Form -->
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" />
+        <span id="nameError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+        <span id="emailError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+        <span id="passwordError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" />
+        <span id="ageError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="countryCode">Country:</label>
+        <select name="countryCode" id="countryCode">
+          <option value="+91">India (+91)</option>
+          <option value="+1">USA (+1)</option>
+          <option value="+44">UK (+44)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile:</label>
+        <input type="text" name="mobile" id="mobile" />
+        <span id="mobileError" class="error"></span>
+      </div>
+
+      <div class="form-group checkbox">
+        <input type="checkbox" name="terms" id="terms" />
+        <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+        <span id="termsError" class="error"></span>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
